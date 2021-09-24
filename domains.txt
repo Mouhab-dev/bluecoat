@@ -1,10 +1,13 @@
-facebook.com
-amazon.eg
+facebook[.]com
+amazon[.]eg
 twitter.com
 google.com
 gmail.com
 yahoo.com
 autodiscover.br
 autodiscover.it
-https://aws.amazon.com/
+https[:]//aws.amazon.com/
 azure.com
+hxxps://mal.com[.]de
+hxxp[:]//example.com
+https[:]//www.egcovac.mohp[.]gov[.]eg/
