@@ -5,7 +5,7 @@ import json
 import os
 import time
 
-import pytesseract
+#import pytesseract
 import requests
 from PIL import Image
 
