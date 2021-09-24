@@ -6,4 +6,5 @@ gmail.com
 yahoo.com
 autodiscover.br
 autodiscover.it
-pornhub.com
+https://aws.amazon.com/
+azure.com
