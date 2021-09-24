@@ -109,7 +109,6 @@ class SiteReview:
             self.__captcha_recognize()
             return self.get_category(url, is_again=True)
 
-
 # Logic
 categorizer = SiteReview()
 blocked_categories = ['Malicious Outbound Data/Botnets',
@@ -118,8 +117,9 @@ blocked_categories = ['Malicious Outbound Data/Botnets',
                         'Potentially Unwanted Software',
                         'Spam','Suspicious']
 with open('domains.txt','r') as domains_file:
-    with open('domains_result.txt', 'wa') as domains_result:
+    with open('domains_result.txt', 'w') as domains_result:
         for domain in domains_file:
+            domain = domain.strip()
             try:
                 cat = categorizer.get_category(domain, names_only=True)
                 print(domain, cat)
