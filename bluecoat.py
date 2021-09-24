@@ -118,13 +118,13 @@ blocked_categories = ['Malicious Outbound Data/Botnets',
                         'Potentially Unwanted Software',
                         'Spam','Suspicious']
 with open('domains.txt','r') as domains_file:
-    domain = domains_file.readline()
-    try:
-        cat = categorizer.get_category(domain, names_only=True)
-        if cat not in blocked_categories:
-            with open('domains_result.txt', 'w') as domains_result:
-                domains_result.write(f'{domain}:{cat}\n')
-            #print(domain, cat)
-    except WrongTLD:
-        print(f'Wrong domain for {domain}')
-        pass
+    for domain in domains_file:
+        try:
+            cat = categorizer.get_category(domain, names_only=True)
+            if cat not in blocked_categories:
+                with open('domains_result.txt', 'w') as domains_result:
+                    domains_result.write(f'{domain}:{cat}\n')
+                #print(domain, cat)
+        except WrongTLD:
+            print(f'Wrong domain for {domain}')
+            pass
