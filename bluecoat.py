@@ -126,6 +126,6 @@ with open('domains.txt','r') as domains_file:
                 if cat[0] not in blocked_categories:
                     domains_result.write(f'{domain}:{cat}\n')
             except WrongTLD:
-                domains_result.write(f'[!] Wrong domain for {domain}')
+                domains_result.write(f'[!] Wrong domain for {domain}\n')
                 print(f'[!] Wrong domain for {domain}')
                 pass
