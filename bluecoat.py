@@ -123,7 +123,7 @@ with open('domains.txt','r') as domains_file:
             try:
                 cat = categorizer.get_category(domain, names_only=True)
                 print(domain, cat)
-                if cat not in blocked_categories:
+                if cat[0] not in blocked_categories:
                     domains_result.write(f'{domain}:{cat}')
             except WrongTLD:
                 print(f'Wrong domain for {domain}')
