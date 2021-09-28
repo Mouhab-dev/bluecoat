@@ -97,6 +97,8 @@ class SiteReview:
             if names_only:
                 return self.__get_names_only(json.loads(response.text)['categorization'])
             return json.loads(response.text)['categorization']
+        if json.loads(response.text)['errorType'] == 'captcha':
+            print(json.loads(response.text)['errorMessage'])
         if response.status_code == 422:
             raise WrongTLD
         # this condition is required for every 10th request
